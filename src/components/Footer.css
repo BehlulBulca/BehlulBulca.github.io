@@ -1,0 +1,32 @@
+.footer {
+  background-color: transparent; /* Arka planı şeffaf yap */
+  color: #333; /* Metin rengini koyu gri yap */
+  text-align: center;
+  padding-top: 1rem; /* padding-top instead of padding for all sides */
+  padding-bottom: 1rem; /* padding-bottom */
+  /* position: fixed; */ /* Kaldırıldı */
+  /* bottom: 0; */ /* Kaldırıldı */
+  /* width: 100%; */ /* Kaldırıldı */
+
+  /* Navbar ve main-content ile hizalamak için eklendi */
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* Navbar.css ve App.css ile tutarlı padding */
+  padding-right: 1rem; /* Navbar.css ve App.css ile tutarlı padding */
+}
+
+/* İsteğe bağlı: Daha büyük ekranlar için Navbar.css'deki gibi duyarlı padding */
+@media (min-width: 640px) {
+  .footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

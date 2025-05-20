@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  /* @apply bg-gray-100 text-gray-900 antialiased; */
+  background-color: #f3f4f6; /* Equivalent to bg-gray-100 */
+  color: #1f2937; /* Equivalent to text-gray-900 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  margin: 0; /* Tarayıcı varsayılan margin'ini sıfırlamak iyi bir pratiktir */
+}
+/* İsterseniz buraya h1, p gibi etiketler için temel stiller de ekleyebilirsiniz */
+/*
+h1 {
+  @apply text-2xl font-bold mb-4; 
+}
+p {
+  @apply mb-4;
+}
+*/
