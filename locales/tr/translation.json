@@ -1,0 +1,64 @@
+{
+  "navbar": {
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "languageSwitcher": {
+    "en": "EN",
+    "tr": "TR"
+  },
+  "home": {
+    "subtitle": "Uludağ Üniversitesi Ekonometri Öğrencisi ve Fakülte Stajyeri, Veri Analisti adayı.",
+    "nav": {
+      "about": "Hakkımda",
+      "projects": "Projelerim",
+      "contact": "İletişim"
+    },
+    "alt": {
+      "about": "Hakkımda ikonu",
+      "projects": "Projeler ikonu",
+      "contact": "İletişim ikonu"
+    }
+  },
+  "about": {
+    "title": "Hakkımda",
+    "narrative_intro": "Merhaba! Ben Behlül Bulca. Uludağ Üniversitesi'nde Ekonometri öğrencisiyim; veriye, teknolojiye ve problem çözmeye yönelik güçlü bir tutkuya sahip, motive ve meraklı biriyim. Teorik bilgilerin pratik değere nasıl dönüştürülebileceğini keşfetmeye adanmış durumdayım ve hem akademik hem de teknik olarak becerilerimi geliştirmek için sürekli fırsatlar arıyorum. Teknolojik gelişmeleri aktif olarak takip ediyor, en son araçlar ve trendler konusunda güncel kalmaya gayret ediyorum.",
+    "narrative_education_experience": "Ekim 2022'de başlayan Uludağ Üniversitesi'ndeki Ekonometri eğitim yolculuğum bana sağlam bir temel sağladı. Bu temel, Ekim 2023'ten Şubat 2024'e kadar Polonya, Białystok'taki Doğu Avrupa Uygulamalı Bilimler Üniversitesi'nde katıldığım Erasmus+ Öğrenci Hareketliliği programı ile daha da zenginleşti; bu deneyim, uyum yeteneğimi önemli ölçüde artırdı ve çok kültürlü ortamlardaki bakış açımı genişletti. Şu anda, Uludağ Üniversitesi İktisadi ve İdari Bilimler Fakültesi'nde kısmi zamanlı öğrenci olarak pratik deneyim kazanıyorum. Kasım 2024'te başlayan ve Haziran 2025'te sona erecek olan bu görevim, BT desteği sağlamayı, lojistik görevlere yardımcı olmayı ve fakültenin günlük operasyonlarının sorunsuz yürümesine katkıda bulunan idari işlevleri desteklemeyi içeriyor.",
+    "narrative_skills_aspirations": "Derslerim ve pratik uygulamalarım sayesinde Excel, Python ve R programlarında başlangıç seviyesinde uygulamalı deneyim edindim. Bu araçlar, çeşitli ekonometri ve kantitatif yöntemler dersleri için veri manipülasyonu, temel istatistiksel analiz ve görselleştirme görevlerinde yardımcı oldu. Bu teknik becerilerimi sınıf ödevlerine, kişisel projelerime ve staj sorumluluklarıma uygulayarak sürekli geliştirmeye kararlıyım. Ana dilim olan Türkçe'nin yanı sıra, İngilizce'yi bağımsız kullanıcı seviyesinde (tüm becerilerde B2) kullanabiliyorum. Ayrıca B kategorisi ehliyetim bulunmaktadır."
+  },
+  "projectsPage": {
+    "title": "Projelerim",
+    "intro": "Bugüne kadar üzerinde çalıştığım ve gurur duyduğum bazı projeler. Daha fazlası için GitHub profilime göz atabilirsiniz.",
+    "card": {
+      "technologiesLabel": "Kullanılan Teknolojiler:",
+      "liveDemoButton": "Canlı Demo",
+      "githubButton": "GitHub"
+    },
+    "projectData": {
+      "project1_title": "Kişisel Portfolyo Websitesi",
+      "project1_description": "React, Vite ve uluslararasılaştırma için i18next kullanılarak oluşturulmuş kişisel portfolyo web sitem. Becerilerimi ve projelerimi sergiliyor.",
+      "project2_title": "Kapsamlı Finansal Analiz ve Makine Öğrenmesi Platformu",
+      "project2_description": "Başta Borsa İstanbul (BIST) olmak üzere çeşitli finansal piyasalar için derinlemesine veri analizi, etkileşimli görselleştirmeler ve makine öğrenmesi destekli fiyat tahminleri sunan bir web uygulamasıdır."
+    }
+  },
+  "projectDetailPage": {
+    "loading": "Proje {{projectId}} yükleniyor...",
+    "aboutTitle": "Proje Hakkında",
+    "project1_longDescription": "Şu anda incelemekte olduğunuz bu portfolyo web sitesi, ön yüz geliştirme becerilerimin pratik bir gösterimi olarak hizmet vermektedir.\n\nKullanıcı arayüzü için React, hızlı ve optimize edilmiş bir geliştirme ve derleme süreci için Vite ve sayfalar arası sorunsuz gezinme için React Router dahil olmak üzere modern web teknolojileri kullanılarak sıfırdan oluşturulmuştur.\n\nÖnemli bir özelliği, içeriğin hem İngilizce hem de Türkçe olarak görüntülenmesine olanak tanıyan i18next ile uygulanan uluslararasılaştırma (i18n) yetenekleridir.\n\nSite, çeşitli ekran boyutlarına uyum sağlayan duyarlı bir tasarım sunan, stil için özel CSS içeren minimalist bir karanlık tema kullanmaktadır.\n\nGeliştirme süreci, yeniden kullanılabilir bileşenler oluşturmaya, temiz kod yazmaya ve profesyonel ve kullanıcı dostu bir deneyim sağlamaya odaklanmıştır.\n\nProjelerimi, becerilerimi ve profesyonel yolculuğumu sergilemek üzere GitHub Pages'te dağıtılmak üzere tasarlanmıştır.",
+    "project2_longDescription": "Bu proje, Borsa İstanbul (BIST) başta olmak üzere çeşitli finansal piyasalara yönelik derinlemesine veri analizi, etkileşimli görselleştirmeler ve makine öğrenmesi destekli fiyat tahminleri sunmayı amaçlayan bir web uygulamasıdır. Temel hedef, kullanıcılara yatırım kararlarında yardımcı olacak güçlü ve kullanıcı dostu bir araç seti sağlamaktır.\n\nProje, sağlam bir backend altyapısı üzerine inşa edilmiştir. Veri yönetimi, dağınık JSON dosyaları yerine merkezi bir SQLite veritabanı ve Peewee ORM aracılığıyla etkin bir şekilde yönetilmektedir. Bu merkezileştirme, veri tutarlılığını ve erişilebilirliğini artırmaktadır. Benzer şekilde, tüm uygulama ve makine öğrenmesi yapılandırmaları kolay yönetim için tek bir yerde toplanmıştır.\n\nMakine öğrenmesi iş akışı, yfinance gibi kaynaklardan veri toplamayı, bu verilerin LSTM gibi derin öğrenme modelleri için hazırlanmasını, Optuna ile hiperparametre optimizasyonu yapılarak modellerin eğitilmesini ve eğitilmiş modellerle tahminler üretilmesini kapsamaktadır. Özellikle BIST30 endeksindeki hisseler için LSTM tabanlı tahmin modelleri geliştirilmekte ve performansları Ortalama Mutlak Yüzde Hata (MAPE) ve yön doğruluğu gibi metriklerle değerlendirilmektedir.\n\nGelecek hedefleri arasında, yfinance API çağrıları için bir backend önbellekleme mekanizmasının entegrasyonu, beta katsayısı ve CAPM gibi temel ekonometrik modellerin hesaplanması, teknik göstergelerin (SMA, EMA, RSI, MACD) ve gecikmeli değerlerin özellik mühendisliği yoluyla makine öğrenmesi modellerine dahil edilmesi bulunmaktadır.\n\nUzun vadede ise kullanıcı hesapları, gelişmiş grafikler, büyük dil modeli (LLM) entegrasyonları (örneğin, piyasa duygu analizi) ve kapsamlı bir MLOps altyapısı ile projenin yeteneklerinin daha da genişletilmesi planlanmaktadır.\n\nBu proje, finansal veri bilimi ve yazılım geliştirme alanlarındaki yetkinliklerimi sergilemekte olup, karmaşık problemleri çözme ve uçtan uca bir uygulama geliştirme sürecindeki deneyimimi yansıtmaktadır.\n\nBu proje aktif geliştirme sürecinde olup, yeni yetenekler ve iyileştirmelerle sürekli olarak zenginleştirilmektedir."
+  },
+  "contactPage": {
+    "title": "İletişime Geçin",
+    "intro": "Aşağıdaki bilgiler aracılığıyla bana doğrudan ulaşabilirsiniz. Projeleriniz, işbirliği fırsatları veya sadece bir merhaba demek için yazmaktan çekinmeyin!",
+    "infoTitle": "İletişim Bilgilerim",
+    "emailLabel": "E-posta:",
+    "linkedInLabel": "LinkedIn:",
+    "githubLabel": "GitHub:"
+  },
+  "footer": {
+    "copyrightMIT": "© {{year}} Behlül Bulca. MIT Lisansı altında lisanslanmıştır.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}

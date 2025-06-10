@@ -1,0 +1,64 @@
+{
+  "navbar": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "languageSwitcher": {
+    "en": "EN",
+    "tr": "TR"
+  },
+  "home": {
+    "subtitle": "Econometrics student at Uludağ University and Faculty Intern, aspiring Data Analyst.",
+    "nav": {
+      "about": "About Me",
+      "projects": "My Projects",
+      "contact": "Contact"
+    },
+    "alt": {
+      "about": "About icon",
+      "projects": "Projects icon",
+      "contact": "Contact icon"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "narrative_intro": "Hello! I am Behlül Bulca, a motivated and curious Econometrics student at Uludağ University with a strong passion for data, technology, and problem-solving. I am dedicated to exploring how theoretical knowledge can be translated into practical value and continuously seek opportunities to enhance my skills, both academically and technically. I actively follow technological advancements, striving to stay current with the latest tools and trends.",
+    "narrative_education_experience": "My academic journey in Econometrics at Uludağ University, which began in October 2022, has provided me with a solid foundation. This was further enriched by an Erasmus+ Student Mobility program at the Eastern European University of Applied Sciences in Białystok, Poland, from October 2023 to February 2024, an experience that significantly enhanced my adaptability and broadened my perspective in multicultural environments. Currently, I am gaining practical experience as a Faculty Intern and Student Assistant at the Faculty of Economics and Administrative Sciences at Uludağ University. This role, which commenced in November 2024 and concludes in June 2025, involves providing IT support, assisting with logistical tasks, and supporting administrative functions, all of which contribute to the smooth day-to-day operations of the faculty.",
+    "narrative_skills_aspirations": "Through my coursework and practical applications, I have gained introductory-level hands-on experience with Excel, Python, and R. These tools have been instrumental in data manipulation, basic statistical analysis, and visualization tasks for various econometrics and quantitative methods courses. I am committed to continuously improving these technical skills by applying them to class assignments, personal projects, and my internship responsibilities. In addition to my native Turkish, I am an independent user of English (B2 level across all skills). I also hold a Category B driving licence."
+  },
+  "projectsPage": {
+    "title": "My Projects",
+    "intro": "Some of the projects I have worked on and am proud of. Check out my GitHub profile for more.",
+    "card": {
+      "technologiesLabel": "Technologies Used:",
+      "liveDemoButton": "Live Demo",
+      "githubButton": "GitHub"
+    },
+    "projectData": {
+      "project1_title": "Personal Portfolio Website",
+      "project1_description": "My personal portfolio website, built with React, Vite, and i18next for internationalization. Showcasing my skills and projects.",
+      "project2_title": "Comprehensive Financial Analysis and Machine Learning Platform",
+      "project2_description": "A web application offering in-depth data analysis, interactive visualizations, and machine learning-powered price predictions for financial markets, primarily Borsa Istanbul (BIST)."
+    }
+  },
+  "projectDetailPage": {
+    "loading": "Loading project {{projectId}}...",
+    "aboutTitle": "About This Project",
+    "project1_longDescription": "This very portfolio website serves as a practical demonstration of my front-end development skills.\n\nIt was built from the ground up using modern web technologies including React for the user interface, Vite for a fast and optimized development and build process, and React Router for seamless navigation between pages.\n\nA key feature is its internationalization (i18n) capabilities, implemented with i18next, allowing content to be displayed in both English and Turkish.\n\nThe site employs a minimalist dark theme with custom CSS for styling, ensuring a responsive design that adapts to various screen sizes.\n\nThe development process focused on creating reusable components, maintaining clean code, and ensuring a professional and user-friendly experience.\n\nIt's designed to be deployed on GitHub Pages, showcasing my projects, skills, and professional journey.",
+    "project2_longDescription": "This project is a web application designed to provide in-depth data analysis, interactive visualizations, and machine learning-assisted price predictions for various financial markets, with a primary focus on Borsa Istanbul (BIST). The main goal is to offer users a powerful and user-friendly toolkit to aid their investment decisions.\n\nThe application is built on a robust backend infrastructure. Data management is handled efficiently through a centralized SQLite database and the Peewee ORM, which replaces scattered JSON files. This centralization enhances data consistency and accessibility. Similarly, all application and machine learning configurations are consolidated for ease of management.\n\nThe machine learning workflow includes data ingestion from sources like yfinance, preparing this data for deep learning models such as LSTM, training models with hyperparameter optimization using Optuna, and generating predictions with the trained models. Specifically, LSTM-based prediction models are being developed for stocks in the BIST30 index, and their performance is evaluated using metrics like Mean Absolute Percentage Error (MAPE) and directional accuracy.\n\nFuture objectives include integrating a backend caching mechanism for yfinance API calls, calculating fundamental econometric models like the beta coefficient and CAPM, and incorporating technical indicators (SMA, EMA, RSI, MACD) and lagged values into ML models through feature engineering.\n\nLong-term plans involve further expanding the project's capabilities with user accounts, advanced charting, LLM integrations (e.g., for market sentiment analysis), and a comprehensive MLOps infrastructure.\n\nThis project showcases my competencies in financial data science and software development, reflecting my experience in solving complex problems and in the end-to-end development process of an application.\n\nThis project is under active development, and is being continuously enriched with new capabilities and improvements."
+  },
+  "contactPage": {
+    "title": "Get in Touch",
+    "intro": "You can reach me directly through the information below. Feel free to write for your projects, collaboration opportunities, or just to say hello!",
+    "infoTitle": "My Contact Information",
+    "emailLabel": "Email:",
+    "linkedInLabel": "LinkedIn:",
+    "githubLabel": "GitHub:"
+  },
+  "footer": {
+    "copyrightMIT": "© {{year}} Behlül Bulca. Licensed under the MIT License.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}
