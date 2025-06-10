@@ -1,58 +1,83 @@
 /* Styles for AboutPage.jsx */
 .about-page {
     padding: 2rem;
-    text-align: center;
+    color: #e0e0e0; /* Ana metin rengi */
+    max-width: 900px; /* Sayfa genişliğini sınırlayalım */
+    margin: 2rem auto; /* Ortalamak için */
+    font-family: 'Poppins', sans-serif;
+    /* background-color: rgba(0, 255, 0, 0.1); /* DEBUG: Geçici yeşilimsi arka plan */ */
+    /* border: 2px solid green; /* DEBUG: Geçici yeşil kenarlık */ */
 }
 
 .about-page h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.about-section {
+    font-size: 2.8rem; /* Ana başlık boyutu */
+    font-weight: 700;
     margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* Başlık rengi */
+    text-align: center;
 }
 
-.about-section h2 {
+.about-content {
+    background-color: rgba(255, 255, 255, 0.05); /* Hafif yarı saydam arka plan */
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left; /* İçerik sola yaslı */
+}
+
+.about-content h2 {
     font-size: 1.8rem;
-    margin-bottom: 0.75rem;
-    color: #555;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
 }
 
-.about-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #c0c0c0; /* Paragraf metin rengi */
+    margin-bottom: 1.5rem;
 }
 
-.team-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
+.about-content strong {
+    font-weight: 600;
+    color: #ffffff;
 }
 
-.team-member {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    width: 200px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    .about-page {
+        padding: 1.5rem;
+    }
+
+    .about-page h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-content {
+        padding: 1.5rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
 }
 
-.team-member h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #444;
-}
-
-.team-member p {
-    font-size: 0.9rem;
-    color: #777;
+@media (max-width: 480px) {
+    .about-page h1 {
+        font-size: 1.8rem;
+    }
+    .about-content h2 {
+        font-size: 1.4rem;
+    }
+    .about-content p {
+        font-size: 0.95rem;
+    }
 }

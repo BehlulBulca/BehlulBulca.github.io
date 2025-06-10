@@ -1,75 +1,207 @@
-.homepage-container {
-  padding: 2rem 0;
-}
-
-.hero-section {
-  background-color: #e9ecef; /* A light gray, can be changed */
-  padding: 4rem 2rem;
+.new-homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Changed from center to flex-start */
+  /* min-height: 100vh; */ /* Removed to allow footer to be visible */
+  width: 100%;
+  /* Arka plan stilleri src/index.css body'ye taşındı */
+  padding: 2rem; /* Original padding for all sides */
+  padding-top: 4rem; /* Adjusted to clear the Navbar (Navbar height is 4rem) */
   text-align: center;
-  border-radius: 0.375rem; /* rounded-md equivalent */
-  margin-bottom: 2rem;
+  overflow: hidden; /* Sayfa kaymasını engellemek için */
+  position: relative; /* Alt elemanların konumlandırılması için gerekebilir */
+  /* z-index artık burada yönetilmiyor, global body::before katmanı var */
 }
 
-.hero-title {
-  font-size: 2.5rem; /* text-4xl equivalent */
-  font-weight: 700; /* font-bold */
-  margin-bottom: 1rem;
-  color: #343a40; /* Darker gray for text */
+/* Arka plan katmanı src/index.css body::before'a taşındı */
+/* .new-homepage-container::before silindi */
+
+.homepage-header,
+.glassmorphic-nav,
+.homepage-social-links {
+  position: relative; /* Gerekirse diğer konumlandırmalar için kalabilir */
+  /* z-index: 2; // Global body::before nedeniyle artık gerekli değil */
 }
 
-.hero-subtitle {
-  font-size: 1.25rem; /* text-xl equivalent */
-  margin-bottom: 2rem;
-  color: #495057; /* Slightly lighter gray for subtitle */
+.homepage-header {
+  margin-bottom: 3rem;
 }
 
-.cta-button {
-  background-color: #007bff; /* Primary blue */
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.375rem;
-  font-size: 1rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background-color 0.2s ease-in-out;
+.main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem; /* Boyutu ayarlanabilir */
+  font-weight: 700;
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
 }
 
-.cta-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem; /* Boyutu ayarlanabilir */
+  font-weight: 400;
+  color: #a0a0a0;
+  margin-bottom: 3rem;
 }
 
-.features-section {
-  padding: 2rem 0;
-  text-align: center;
+/* Eski .glassmorphic-nav, .nav-links, .nav-links li a stillerini kaldır veya yorum satırına al */
+/*
+.glassmorphic-nav {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem 3rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-bottom: 3rem;
 }
 
-.features-title {
-  font-size: 2rem; /* text-3xl equivalent */
-  font-weight: 600; /* font-semibold */
-  margin-bottom: 2rem;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
   gap: 2rem;
 }
 
-.feature-item {
-  background-color: #f8f9fa; /* Very light gray for feature items */
-  padding: 2rem;
-  border-radius: 0.375rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.nav-links li a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.feature-item h3 {
-  font-size: 1.5rem; /* text-2xl equivalent */
-  font-weight: 600;
-  margin-bottom: 1rem;
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+*/
+
+.home-navigation { 
+  /* Glassmorphic stilleri */
+  background: rgba(255, 255, 255, 0.1); /* Yarı saydam beyaz arka plan */
+  backdrop-filter: blur(10px); /* Bulanıklık efekti */
+  -webkit-backdrop-filter: blur(10px); /* Safari için */
+  border-radius: 15px;
+  padding: 2rem 3rem; /* Kutunun iç boşluğu */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-bottom: 3rem;
+
+  /* Linkler için flex container */
+  display: flex;
+  gap: 2rem; /* Linkler arası boşluk */
+  justify-content: center; /* Linkleri ortala */
 }
 
-.feature-item p {
-  font-size: 1rem;
-  color: #6c757d;
+.home-navigation .nav-link {
+  /* Link öğesi stilleri */
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: #e0e0e0; /* Metin rengi - MAVİ DEĞİL */
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem; /* Linkin kendi iç boşluğu */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* Link içindeki ikon ve metin için flex container */
+  display: inline-flex; /* İkon ve metnin yan yana durmasını ve gap kullanmasını sağlar */
+  align-items: center; /* Dikeyde ikon ve metni hizala */
+  gap: 10px; /* İkon ve metin arasına boşluk */
+}
+
+.home-navigation .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.nav-icon {
+  width: 24px; 
+  height: 24px; 
+  /* filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg); */ /* İsteğe bağlı: ikonların rengini değiştirmek gerekirse */
+}
+
+/* Footer stilleri */
+.home-footer {
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  color: #a0a0a0; /* Copyright text color */
+  font-size: 0.9rem;
+  position: absolute; 
+  bottom: 20px; 
+  left: 0;
+  right: 0;
+  z-index: 5; /* Ensure it's above background elements if any overlap */
+}
+
+.home-footer p {
+  margin-bottom: 0.5rem;
+}
+
+.home-footer .social-links a {
+  font-family: 'Poppins', sans-serif;
+  color: #c0c0c0; /* Social media link color */
+  text-decoration: none; /* Remove underline */
+  margin: 0 0.75rem;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.home-footer .social-links a:hover {
+  color: #ffffff; /* Hover color for social media links */
+}
+
+/* Daha küçük ekranlar için responsive ayarlar */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .glassmorphic-nav {
+    padding: 1.5rem 2rem;
+  }
+  .nav-links {
+    flex-direction: column; /* Linkleri alt alta sırala */
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .glassmorphic-nav {
+    padding: 1rem 1.5rem;
+  }
+}
+
+.home-navigation .nav-link.home-nav-link-stacked {
+  flex-direction: column; /* İkon ve metni alt alta sırala */
+  align-items: center; /* Ortala */
+  gap: 8px; /* İkon ve metin arasına dikey boşluk */
+  text-align: center; /* Ensure text within span is centered */
+}
+
+.home-navigation .nav-link.home-nav-link-stacked .nav-icon {
+  width: 64px; /* Ana sayfa ikonları biraz daha büyük olabilir */
+  height: 64px;
+  /* margin-bottom: 4px; /* Removed, rely on parent's gap */
+}
+
+.home-navigation .nav-link.home-nav-link-stacked span {
+  display: block; /* Metnin düzgün hizalanması için */
+  text-align: center;
 }

@@ -1,0 +1,116 @@
+.project-detail-page {
+  padding: 2rem 1rem;
+  max-width: 900px; /* Sayfa genişliğini ayarla */
+  margin: 0 auto; /* Ortala */
+  color: #e0e0e0;
+}
+
+.project-detail-content-box {
+  background-color: rgba(40, 40, 40, 0.8); /* Hafif yarı saydam koyu arka plan */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-detail-page h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #4CAF50; /* Tema rengiyle uyumlu bir alt çizgi */
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.project-detail-image {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-detail-body h2 {
+  font-size: 1.8rem;
+  color: #e0e0e0;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-detail-body p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #c0c0c0;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.project-technologies-detail {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-technologies-detail h3 {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  margin-bottom: 0.75rem;
+}
+
+.project-technologies-detail ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-technologies-detail li {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #d0d0d0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.project-links-detail {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* Linkleri ortala */
+}
+
+.project-links-detail .project-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #4CAF50; /* Ana tema rengi */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+}
+
+.project-links-detail .project-link.github {
+  background-color: #555; /* GitHub için farklı renk */
+}
+
+.project-links-detail .project-link:hover {
+  background-color: #45a049; /* Ana tema rengi hover */
+  transform: translateY(-2px);
+}
+
+.project-links-detail .project-link.github:hover {
+  background-color: #444; /* GitHub hover */
+}
+
+/* Proje bulunamadı mesajı için */
+.project-detail-page p[role="alert"] {
+  font-size: 1.2rem;
+  color: #ffc107; /* Uyarı rengi */
+  text-align: center;
+  padding: 2rem;
+}

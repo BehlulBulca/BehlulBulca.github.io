@@ -1,0 +1,177 @@
+/* src/pages/ProjectsPage.css */
+/* Styles for ProjectsPage.jsx */
+.projects-page {
+  padding: 2rem;
+  color: #e0e0e0;
+  max-width: 1200px; /* Proje kartları için daha geniş alan */
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.projects-page h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.projects-intro {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  color: #a0a0a0;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* Kart genişliği ayarlandı */
+  gap: 2rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05); /* Hafif yarı saydam arka plan */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+  width: 100%;
+  height: 300px; /* Resim yüksekliği 220px'den 300px'e güncellendi */
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #ffffff; /* Başlık rengi */
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #c0c0c0; /* Paragraf metin rengi */
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.project-technologies {
+  margin-bottom: 1.2rem;
+}
+
+.project-technologies strong {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e0e0e0;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.project-technologies ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.project-technologies li {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.project-links {
+  margin-top: auto; /* Linkleri kartın altına iter */
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: #82aaff; /* Link rengi */
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  background-color: rgba(130, 170, 255, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: rgba(130, 170, 255, 0.2);
+  color: #a8c5ff;
+}
+
+.project-link.github {
+  color: #c3aeff; /* GitHub link rengi */
+  background-color: rgba(195, 174, 255, 0.1);
+}
+
+.project-link.github:hover {
+  background-color: rgba(195, 174, 255, 0.2);
+  color: #d8c8ff;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+  .projects-page h1 {
+    font-size: 2.2rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr; /* Tek sütun */
+  }
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-page h1 {
+    font-size: 1.8rem;
+  }
+  .project-content h2 {
+    font-size: 1.3rem;
+  }
+  .project-description {
+    font-size: 0.9rem;
+  }
+  .project-technologies li {
+    font-size: 0.8rem;
+  }
+  .project-link {
+    font-size: 0.9rem;
+  }
+}

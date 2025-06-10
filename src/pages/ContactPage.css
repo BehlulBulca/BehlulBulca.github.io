@@ -1,95 +1,99 @@
 /* Styles for ContactPage.jsx */
 .contact-page {
     padding: 2rem;
-    text-align: center;
+    color: #e0e0e0;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
 }
 
 .contact-page h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    font-weight: 700;
     margin-bottom: 1rem;
-    color: #333;
+    color: #ffffff;
+    text-align: center;
 }
 
 .contact-intro {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: #666;
+    margin-bottom: 2.5rem;
+    color: #a0a0a0;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contact-content {
+.contact-content-wrapper { /* Form ve bilgileri yan yana getirmek için */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta */
     gap: 2rem;
-    margin-top: 2rem;
+    justify-content: center; /* İçeriği ortalamak için space-between yerine center kullanıldı */
 }
 
-.contact-form-section,
-.contact-info-section {
-    background-color: #f9f9f9;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    flex: 1;
-    min-width: 300px;
-    text-align: left;
+.contact-info { /* .contact-form-container kaldırıldığı için .contact-info stilini güncelliyoruz */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex-basis: 500px; /* Sabit bir genişlik veya max-width verilebilir, flex: 1 yerine */
+    max-width: 100%; /* Küçük ekranlarda taşmayı engeller */
+    /* min-width: 320px; // Artık tek eleman olduğu için bu daha az önemli */
 }
 
-.contact-form-section h2,
-.contact-info-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #444;
+.contact-info h2 { /* .contact-form-container h2 ile birleştirilmişti, şimdi sadece .contact-info h2 */
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.75rem;
 }
 
-.form-group {
-    margin-bottom: 1rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #555;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-    width: calc(100% - 20px); /* Account for padding */
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.form-group textarea {
-    min-height: 100px;
-    resize: vertical;
-}
-
-.submit-button {
-    background-color: #007bff;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.submit-button:hover {
-    background-color: #0056b3;
-}
-
-.contact-info-section p {
+.contact-info p {
     font-size: 1rem;
     line-height: 1.8;
-    color: #666;
-    margin-bottom: 0.5rem;
+    color: #c0c0c0;
+    margin-bottom: 1rem;
 }
 
-.contact-info-section strong {
-    color: #555;
+.contact-info strong {
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+.contact-info a {
+    color: #82aaff; /* Link rengi */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #a8c5ff;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    .contact-page h1 {
+        font-size: 2.2rem;
+    }
+    /* .contact-content-wrapper flex-direction: column; zaten wrap ile alt alta geçecektir */
+    .contact-info {
+        /* min-width: unset; // Kaldırıldı */
+        flex-basis: 100%; /* Tam genişlik kaplasın */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-page h1 {
+        font-size: 1.8rem;
+    }
+    .contact-info h2 { /* .contact-form-container h2 kaldırıldı */
+        font-size: 1.4rem;
+    }
+    /* Form elemanları kaldırıldığı için onlarla ilgili responsive stiller de kaldırıldı */
 }

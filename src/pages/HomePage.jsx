@@ -1,33 +1,37 @@
 import React from 'react';
-import './HomePage.css'; // Import the CSS file
-import { Link } from 'react-router-dom'; // For CTA button
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
+import './HomePage.css';
+
+// SVG ikonlarını import et
+import identificationBadge from '/identification-badge.svg';
+import rocketLaunch from '/rocket-launch.svg';
+import chatCircleDots from '/chat-circle-dots.svg';
 
 const HomePage = () => {
-  return (
-    <div className="homepage-container">
-      <section className="hero-section">
-        <h1 className="hero-title">Şirketimize Hoş Geldiniz!</h1>
-        <p className="hero-subtitle">Sektör lideri çözümlerimizle tanışın.</p>
-        <Link to="/services" className="cta-button">Hizmetlerimizi Keşfedin</Link>
-      </section>
+  const { t } = useTranslation(); // Initialize useTranslation
 
-      <section className="features-section">
-        <h2 className="features-title">Neden Biz?</h2>
-        <div className="features-grid">
-          <div className="feature-item">
-            <h3>Yenilikçi Yaklaşım</h3>
-            <p>Projelerinize modern ve etkili çözümler sunuyoruz.</p>
-          </div>
-          <div className="feature-item">
-            <h3>Uzman Kadro</h3>
-            <p>Alanında deneyimli profesyonellerle çalışın.</p>
-          </div>
-          <div className="feature-item">
-            <h3>Müşteri Odaklılık</h3>
-            <p>İhtiyaçlarınızı anlıyor ve size özel çözümler üretiyoruz.</p>
-          </div>
-        </div>
-      </section>
+  return (
+    <div className="new-homepage-container">
+      <header className="homepage-header">
+        <h1 className="main-title">Behlül Bulca</h1>
+        <p className="subtitle">{t('home.subtitle')}</p>
+      </header>
+
+      <nav className="home-navigation">
+        <Link to="/about" className="nav-link home-nav-link-stacked">
+          <img src={identificationBadge} alt={t('home.alt.about')} className="nav-icon" />
+          <span>{t('home.nav.about')}</span>
+        </Link>
+        <Link to="/projects" className="nav-link home-nav-link-stacked">
+          <img src={rocketLaunch} alt={t('home.alt.projects')} className="nav-icon" />
+          <span>{t('home.nav.projects')}</span>
+        </Link>
+        <Link to="/contact" className="nav-link home-nav-link-stacked">
+          <img src={chatCircleDots} alt={t('home.alt.contact')} className="nav-icon" />
+          <span>{t('home.nav.contact')}</span>
+        </Link>
+      </nav>
     </div>
   );
 };

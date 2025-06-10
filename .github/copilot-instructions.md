@@ -7,4 +7,7 @@
 - Write clear and concise comments for complex logic.
 - Ensure components are reusable and follow the Single Responsibility Principle.
 - Follow the existing project structure for new files and components.
-- The goal is to build a company website to showcase our services and team.
+- The goal is to build a personal portfolio website.
+- The website will showcase my skills, projects, and professional interests.
+- It should be suitable for including in a CV and for public viewing on GitHub Pages.
+- The tone of the content should be professional.

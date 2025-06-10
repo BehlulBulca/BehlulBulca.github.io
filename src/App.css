@@ -49,17 +49,10 @@
 
 .main-content {
   flex-grow: 1; /* Equivalent to flex-1 */
-  max-width: 1280px; /* Standard container max-width, adjust as needed */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem; /* px-4 */
-  padding-right: 1rem; /* px-4 */
-  padding-top: 2rem; /* py-8 */
-  padding-bottom: 2rem; /* py-8 */
-  background-color: white;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
-  border-radius: 0.5rem; /* rounded-lg */
-  width: 100%; /* Ensure it takes available width within padding limits */
+  width: 100%; /* Genişliğin tamamını kaplamasını sağla */
+  position: relative; /* z-index ve diğer konumlandırmalar için */
+  z-index: 1; /* Navbar gibi diğer elemanların üzerinde kalmasını sağlar */
+  /* padding-top: 4rem; Kaldırıldı, koşullu olarak eklenecek */
 }
 
 /* Add responsive padding to match Navbar.css */
@@ -75,4 +68,8 @@
     padding-left: 2rem; /* lg:px-8 */
     padding-right: 2rem; /* lg:px-8 */
   }
+}
+
+.main-content-padded {
+  padding-top: 4rem; /* Navbar yüksekliği kadar padding */
 }

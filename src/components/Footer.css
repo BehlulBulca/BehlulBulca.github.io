@@ -1,6 +1,6 @@
 .footer {
   background-color: transparent; /* Arka planı şeffaf yap */
-  color: #333; /* Metin rengini koyu gri yap */
+  color: #A0A0A0; /* Lighter text for footer in dark theme */
   text-align: center;
   padding-top: 1rem; /* padding-top instead of padding for all sides */
   padding-bottom: 1rem; /* padding-bottom */
@@ -14,6 +14,8 @@
   margin-right: auto;
   padding-left: 1rem; /* Navbar.css ve App.css ile tutarlı padding */
   padding-right: 1rem; /* Navbar.css ve App.css ile tutarlı padding */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Üstte ince bir çizgi */
+  margin-top: 2rem; /* İçerikle arasında boşluk */
 }
 
 /* İsteğe bağlı: Daha büyük ekranlar için Navbar.css'deki gibi duyarlı padding */
@@ -29,4 +31,54 @@
     padding-left: 2rem;
     padding-right: 2rem;
   }
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Önce navigasyon, sonra telif hakkı */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* Navigasyon ve telif hakkı arasında boşluk */
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.5rem; /* Navigasyon linkleri arasında boşluk */
+  margin-bottom: 0.5rem; /* Telif hakkı metninden önce biraz boşluk */
+}
+
+.footer-nav-link {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: #a0a0a0; /* Link rengi */
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-nav-link:hover {
+  color: #ffffff; /* Hover rengi */
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 1rem; /* Adjust as needed */
+  margin-bottom: 0.5rem; /* Space before copyright */
+}
+
+.footer-social-links a {
+  font-family: 'Poppins', sans-serif;
+  color: #c0c0c0; /* Consistent with previous HomePage social link color */
+  text-decoration: none;
+  font-size: 0.9rem; /* Consistent with previous HomePage social link size */
+  transition: color 0.3s ease;
+}
+
+.footer-social-links a:hover {
+  color: #ffffff; /* Consistent with previous HomePage social link hover color */
+}
+
+.copyright-text {
+  font-size: 0.85rem;
+  color: #757575; /* Telif hakkı metni için daha soluk bir renk */
 }

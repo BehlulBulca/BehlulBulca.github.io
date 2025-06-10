@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  background-color: #1a1a1a; /* Dark background color */
 }
 
 *, *::before, *::after {
@@ -7,14 +8,28 @@ html {
 }
 
 body {
-  /* @apply bg-gray-100 text-gray-900 antialiased; */
-  background-color: #f3f4f6; /* Equivalent to bg-gray-100 */
-  color: #1f2937; /* Equivalent to text-gray-900 */
+  /* background-color: #121212; // Eski düz renk arka planı kaldırıyoruz */
+  background-color: #1a1a1a; /* Dark background color */
+  color: #E0E0E0; /* Light text color */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Roboto', sans-serif;
-  margin: 0; /* Tarayıcı varsayılan margin'ini sıfırlamak iyi bir pratiktir */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  /* background-image: url('/background.jpg'); // Eski yöntem */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/backgroundcompressed.jpg'); /* Yeni: Gradyan katmanlı arka plan resmi */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* Performans için 'scroll' olarak değiştirildi */
+  position: relative; 
+  /* z-index: 0; // Artık ::before olmadığı için bu z-index daha az kritik */
 }
+
+a {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Ensures links inherit text color from parent, can be overridden */
+}
+
 /* İsterseniz buraya h1, p gibi etiketler için temel stiller de ekleyebilirsiniz */
 /*
 h1 {
