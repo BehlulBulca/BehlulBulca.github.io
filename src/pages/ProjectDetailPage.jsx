@@ -10,8 +10,8 @@ const projectDetailsData = {
     // Daha detaylı içerik buraya eklenecek
     imageUrl: '/project1 background.jpg', // Updated image URL
     technologies: ['React', 'Vite', 'i18next', 'React Router', 'CSS'], // Updated technologies for portfolio project
-    liveLink: '#', // You might want to update this to the actual live link if deployed
-    githubLink: '#', // You might want to update this to the project's GitHub repo
+    liveLink: 'https://BehlulBulca.github.io/', // Corrected live link
+    githubLink: 'https://github.com/BehlulBulca/BehlulBulca.github.io', // Corrected GitHub link
   },
   2: {
     imageUrl: '/project2 background.jpg', // Updated image URL for Project 2

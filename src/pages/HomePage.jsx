@@ -27,7 +27,7 @@ const HomePage = () => {
           <img src={rocketLaunch} alt={t('home.alt.projects')} className="nav-icon" />
           <span>{t('home.nav.projects')}</span>
         </Link>
-        <Link to="/contact" className="nav-link home-nav-link-stacked">
+        <Link to="/contact" className="nav-link home-nav-link-stacked contact-nav-item"> {/* Added contact-nav-item class */}
           <img src={chatCircleDots} alt={t('home.alt.contact')} className="nav-icon" />
           <span>{t('home.nav.contact')}</span>
         </Link>

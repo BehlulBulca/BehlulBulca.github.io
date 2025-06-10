@@ -14,8 +14,8 @@ const ProjectsPage = () => {
       // title ve description kaldırıldı, t() ile alınacak
       technologies: ['React', 'Vite', 'JavaScript', 'CSS', 'i18next', 'React Router'], // Updated technologies for portfolio project
       imageUrl: '/project1 background.jpg', // Updated image URL for the card
-      liveLink: '#',
-      githubLink: 'https://github.com/behlulbulca/portfolio-website', // Placeholder, replace with actual
+      liveLink: 'https://BehlulBulca.github.io/', // Live link for the portfolio itself
+      githubLink: 'https://github.com/BehlulBulca/BehlulBulca.github.io', // Corrected GitHub link for project 1
     },
     {
       id: 2,

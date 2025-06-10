@@ -83,7 +83,7 @@
 }
 */
 
-.home-navigation { 
+.home-navigation {
   /* Glassmorphic stilleri */
   background: rgba(255, 255, 255, 0.1); /* Yarı saydam beyaz arka plan */
   backdrop-filter: blur(10px); /* Bulanıklık efekti */
@@ -100,32 +100,55 @@
   justify-content: center; /* Linkleri ortala */
 }
 
-.home-navigation .nav-link {
-  /* Link öğesi stilleri */
+/* Replace existing .home-navigation .nav-link.home-nav-link-stacked and its children styles */
+.home-navigation .nav-link.home-nav-link-stacked {
+  display: flex;
+  flex-direction: column; /* Stack icon above text */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text */
+  gap: 0.5rem; /* Space between icon and text */
+  padding: 1.2rem; /* Adjusted padding for a larger clickable area */
+  border-radius: 8px; /* Rounded corners for hover effect */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Added transform to transition */
+  color: #e0e0e0; /* Default text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.home-navigation .nav-link.home-nav-link-stacked:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Lighter background on hover */
+  color: #ffffff; /* White text on hover */
+  transform: scale(1.05); /* Added scale effect on hover */
+}
+
+.home-navigation .nav-link.home-nav-link-stacked .nav-icon {
+  width: 48px; /* Icon width */
+  height: 48px; /* Icon height */
+  margin-bottom: 0.25rem; /* Small margin below icon */
+}
+
+.home-navigation .nav-link.home-nav-link-stacked span {
+  font-size: 1rem; /* Text size */
+  display: block; /* Ensure span takes up its own line if needed */
+}
+
+.homepage-social-links {
+  /* Sosyal medya bağlantıları için stiller */
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.homepage-social-links a {
   font-family: 'Poppins', sans-serif;
-  text-decoration: none;
-  color: #e0e0e0; /* Metin rengi - MAVİ DEĞİL */
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 0.5rem 1rem; /* Linkin kendi iç boşluğu */
-  border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-
-  /* Link içindeki ikon ve metin için flex container */
-  display: inline-flex; /* İkon ve metnin yan yana durmasını ve gap kullanmasını sağlar */
-  align-items: center; /* Dikeyde ikon ve metni hizala */
-  gap: 10px; /* İkon ve metin arasına boşluk */
+  color: #c0c0c0; /* Social media link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
-.home-navigation .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-}
-
-.nav-icon {
-  width: 24px; 
-  height: 24px; 
-  /* filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg); */ /* İsteğe bağlı: ikonların rengini değiştirmek gerekirse */
+.homepage-social-links a:hover {
+  color: #ffffff; /* Hover color for social media links */
 }
 
 /* Footer stilleri */
@@ -227,4 +250,113 @@
   */
 }
 
-/* ...existing code... */
+/* Medium (tabletler, 768px ve üzeri) ve Large (laptoplar/desktoplar, 992px ve üzeri) ekranlar için */
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.75rem;
+  }
+
+  .home-navigation {
+    padding: 2.5rem 4rem;
+    gap: 2.5rem;
+    /* Desktop'ta yan yana görünüm için flex-direction: row; (varsayılan) */
+    /* Eğer home-nav-link-stacked sınıfı özellikle kullanılmıyorsa, 
+       aşağıdaki gibi genel bir kural gerekebilir veya 
+       home-nav-link-stacked sınıfının flex-direction'ı burada override edilebilir.
+       Ancak, home-nav-link-stacked zaten column yaptığı için, 
+       desktop'ta yan yana isteniyorsa bu sınıfın kullanılmaması gerekir.
+       Eğer tüm linkler desktop'ta stacked olacaksa, bu media query'de özel bir değişiklik gerekmez.
+    */
+  }
+
+  .home-navigation .nav-link.home-nav-link-stacked .nav-icon {
+    font-size: 2.25rem; /* Desktop için ikon boyutu */
+  }
+
+  .home-navigation .nav-link.home-nav-link-stacked span {
+    font-size: 1.1rem; /* Desktop için metin boyutu */
+  }
+
+  .homepage-social-links a {
+    font-size: 1.8rem;
+  }
+}
+
+/* Small (küçük telefonlar, 480px ve altı) ekranlar için */
+/* @media (max-width: 480px) { ... } */ /* Bu blok boşsa kaldırılabilir veya doldurulabilir */
+
+/* Mobil (telefonlar, 767.98px ve altı) ekranlar için */
+@media (max-width: 767.98px) {
+  .new-homepage-container {
+    padding: 1rem;
+    padding-top: 5rem; /* Navbar yüksekliği + ek boşluk */
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .home-navigation {
+    flex-direction: column; /* Mobil için dikey sıralama */
+    align-items: center; /* Ortala */
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  /* Mobil için .home-nav-link-stacked içindeki ikon ve metin boyutları zaten yukarıda tanımlı 
+     veya bu media query içinde ayrıca ayarlanabilir. 
+     Eğer desktop için olan boyutlar mobilde çok büyüksa, burada küçültülmeli.
+     Mevcut .home-navigation .nav-link.home-nav-link-stacked .link-icon ve .link-text stilleri
+     mobil için uygunsa, burada tekrar tanımlamaya gerek yok.
+     Eğer farklı olması gerekiyorsa:
+  */
+  .home-navigation .nav-link.home-nav-link-stacked .nav-icon {
+    font-size: 1.8rem; /* Mobil için ikon boyutu (örnek) */
+  }
+
+  .home-navigation .nav-link.home-nav-link-stacked span {
+    font-size: 0.9rem; /* Mobil için metin boyutu (örnek) */
+  }
+
+  .homepage-social-links {
+    margin-top: 2rem;
+  }
+
+  .homepage-social-links a {
+    font-size: 1.5rem;
+    padding: 0.6rem;
+  }
+}
+
+/* Small (küçük telefonlar, 480px ve altı) ekranlar için ek düzeltmeler */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .home-navigation .nav-link.home-nav-link-stacked .nav-icon {
+    font-size: 1.6rem; /* Daha küçük telefonlar için ikon boyutu */
+  }
+
+  .home-navigation .nav-link.home-nav-link-stacked span {
+    font-size: 0.8rem; /* Daha küçük telefonlar için metin boyutu */
+  }
+
+  .homepage-social-links a {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+}
