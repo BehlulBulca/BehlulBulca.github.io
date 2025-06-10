@@ -59,6 +59,8 @@
     line-height: 1.8;
     color: #c0c0c0;
     margin-bottom: 1rem;
+    overflow-wrap: break-word; /* Add this for text wrapping */
+    word-break: break-word; /* Fallback/alternative for wider browser support if needed */
 }
 
 .contact-info strong {
@@ -70,6 +72,8 @@
     color: #82aaff; /* Link rengi */
     text-decoration: none;
     transition: color 0.3s ease;
+    overflow-wrap: break-word; /* Add this for link wrapping */
+    word-break: break-word; /* Fallback/alternative */
 }
 
 .contact-info a:hover {

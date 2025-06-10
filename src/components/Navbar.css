@@ -60,12 +60,29 @@
   /* justify-content: center; Will be added in media query */
 }
 
+/* Hide desktop links and language switcher on mobile by default */
+@media (max-width: 767.98px) { /* Targeting screens smaller than md breakpoint */
+  .navbar-links-desktop {
+    display: none;
+  }
+  .navbar-language-switcher { /* Hiding the original language switcher on mobile */
+    display: none;
+  }
+}
+
+
 @media (min-width: 768px) { /* md breakpoint (768px) */
   .navbar-links-desktop {
     /* display: block; /* Becomes visible on medium screens and up */
     flex-grow: 1; /* Allow it to take available space */
     display: flex; /* Enable flexbox for centering */
     justify-content: center; /* Center the ul.navbar-menu */
+  }
+  .navbar-hamburger {
+    display: none; /* Hide hamburger on desktop */
+  }
+  .navbar-links-mobile {
+    display: none; /* Hide mobile menu on desktop */
   }
 }
 
@@ -136,3 +153,95 @@
 
 /* App.jsx'teki main-content için Navbar yüksekliği kadar padding-top eklenmeli */
 /* Bu, Navbar.css'e değil, App.css'e veya ilgili sayfa componentinin sarmalayıcısına eklenmeli */
+
+/* Hamburger Icon Styles */
+.navbar-hamburger {
+  display: none; /* Hidden by default, shown in media query */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger-line {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: #e0e0e0; /* Hamburger line color */
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+
+/* Mobile Menu Styles */
+.navbar-links-mobile {
+  display: block; /* Or 'flex' if it needs to be a flex container itself */
+  position: absolute;
+  top: 100%; /* Position below the navbar */
+  left: 0;
+  width: 100%;
+  background-color: rgba(31, 31, 31, 0.95); /* Slightly more opaque for readability */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem 0; /* Add some padding */
+  z-index: 999; /* Below navbar but above other content */
+}
+
+.navbar-menu-mobile {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center links */
+  width: 100%;
+}
+
+.navbar-link-mobile {
+  color: #e0e0e0;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  justify-content: center; /* Center content within the link */
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-link-mobile:hover,
+.navbar-link-mobile.active-link {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-language-switcher-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  color: #b0b0b0;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Show hamburger and mobile menu container on smaller screens */
+@media (max-width: 767.98px) { /* Using 767.98px to avoid overlap with 768px min-width */
+  .navbar-hamburger {
+    display: flex;
+  }
+  .navbar-links-desktop { /* Ensure desktop links are hidden */
+    display: none;
+  }
+  .navbar-language-switcher { /* Ensure original language switcher is hidden */
+    display: none;
+  }
+}
