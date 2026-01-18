@@ -1,0 +1,62 @@
+---
+title: "Building This Portfolio"
+date: "2026-01-18"
+excerpt: "A deep dive into the tech stack, design philosophy, and engineering behind my personal portfolio website."
+tags: ["Next.js", "TypeScript", "Tailwind CSS", "i18n"]
+coverImage: "/images/hello-world-cover.png"
+---
+
+## Introduction
+
+Welcome to my new portfolio. This project represents more than just a showcase of my work; it's a playground for experimenting with modern web technologies and refined design aesthetics.
+
+## Tech Stack
+
+I chose a robust, production-ready stack that prioritizes performance and developer experience:
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/) for type safety
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) for utility-first styling
+- **Internationalization**: [next-intl](https://next-intl-docs.vercel.app/) for seamless English/Turkish support
+- **Animations**: `animejs` for precise timeline control and custom `FadeIn` components
+- **Content**: MDX for writing blog posts with component flexibility
+
+## Design Philosophy
+
+The design aims for a **"Minimalist Premium"** aesthetic. Key elements include:
+
+- **Glassmorphism**: Subtle translucent layers (`backdrop-blur`) to create depth.
+- **Typography**: A pairing of **Playfair Display** (Serif) for headings and **Inter** (Sans) for body text, creating an editorial feel.
+- **Wireframe Aesthetics**: The hero section uses custom ASCII-style wireframe art to symbolize the intersection of code and design.
+
+## Key Features
+
+1.  **Fully Localized**: Every page, including blog posts, supports English and Turkish.
+2.  **Dark/Light Mode Ready**: Built with CSS variables for easy theming (currently optimized for a light/clean look).
+3.  **Responsive**: flawless experience on mobile, tablet, and desktop.
+4.  **Performance**: Static generation for blog posts ensures lightning-fast load times.
+
+## Code Snippet
+
+Here is how the fade-in animation component is implemented:
+
+```tsx
+export function FadeIn({ children, delay = 0, className }: Props) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    anime({
+      targets: ref.current,
+      opacity: [0, 1],
+      translateY: [20, 0],
+      delay,
+      easing: 'easeOutExpo',
+      duration: 800
+    });
+  }, [delay]);
+
+  return <div ref={ref} className={className}>{children}</div>;
+}
+```
+
+This website is open source. Feel free to explore the code on my [GitHub](https://github.com/BehlulBulca).

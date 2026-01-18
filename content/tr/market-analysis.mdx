@@ -1,0 +1,81 @@
+---
+title: "(WIP) BIST Finansal Analiz Platformu"
+date: "2026-01-18"
+excerpt: "Borsa İstanbul (BIST) piyasaları için tasarlanmış, gerçek zamanlı takip ve makine öğrenimi ile fiyat tahmini sunan yapay zeka destekli finansal analiz platformu."
+tags: ["Python", "Next.js", "Makine Öğrenimi", "Finans"]
+coverImage: "/images/market-analysis-cover.png"
+---
+
+## Genel Bakış
+
+Bu, **Borsa İstanbul (BIST)** piyasaları için tasarlanmış **yapay zeka destekli bir finansal analiz platformudur**. Kurumsal düzeyde analitikler, risk metrikleri ve Türk sermaye piyasaları için makine öğrenimi tabanlı fiyat tahminleri sunar.
+
+## Teknoloji Yığını
+
+ - **Backend** - Python 3.12, Flask 3.0, Peewee ORM, APScheduler
+ - **Frontend** - Next.js 16
+ - **ML/AI** - TensorFlow LSTM modelleri, Statsmodels ekonometri, MCP üzerinden Ollama LLM
+ - **Veritabanı** - PostgreSQL
+ - **Görselleştirme** - Lightweight Charts, Tailwind CSS, shadcn/ui
+
+## Temel Özellikler
+
+- **📈 Gerçek Zamanlı Piyasa Verileri** — Evrensel piyasa modu desteği ile BIST30/BIST100 takibi
+- **🧮 CAPM & Beta Analizi** — Günlük, haftalık ve saatlik ekonometrik modeller
+- **🤖 ML Fiyat Tahmini** — Otomatik yeniden eğitim boru hattına sahip LSTM sinir ağları
+- **🧠 Üretken Yapay Zeka Analizi** — Metrikleri insan tarafından okunabilir içgörülere dönüştüren **Ollama & MCP** destekli doğal dil piyasa yorumları
+- **📊 Teknik Analiz** — RSI, MACD, Bollinger Bantları ve formasyon tespit algoritmaları
+- **🔄 Arka Plan Ajanları** — Tahminler, eğitim ve veri bütünlüğü için zamanlanmış işler (APScheduler)
+- **🛡️ Mock Modu** — Güvenli geliştirme için deterministik veri üretimi
+- **🌐 Çoklu Piyasa Desteği** — BIST30, BIST100, SP500, NASDAQ arasında çalışma zamanı geçişi
+
+## Mimari
+
+```
+┌──────────────┐    ┌────────────────┐    ┌──────────────┐
+│ Next.js UI   │◄──►│ Flask Servisleri│◄──►│ Veritabanı   │
+└──────────────┘    └────────────────┘    └──────────────┘
+        ▲                     ▲                    ▲
+        │                     │                    │
+        │             ┌────────────────┐           │
+        │             │ ML Ajan Yığını │◄──────────┘
+        │             └────────────────┘
+        │
+┌──────────────┐    ┌────────────────┐
+│ Mock Veri    │    │ Ollama / MCP   │
+│ Üretici      │    │ YZ Asistanları │
+└──────────────┘    └────────────────┘
+```
+
+## Proje Yapısı
+
+- **`backend/`** — Ekonometri, teknik analiz, ML ve otomasyon için modüler yapıda Flask API
+- **`frontend/`** — Tailwind ve shadcn/ui bileşenleri ile Next.js 16 frontend
+- **`config/`** — API anahtarları, ayarlar ve kullanıcı tercihleri
+- **`data/`** — Piyasa geçmişi ve raporlar için yerel depolama
+- **`docs/`** — Mimari, API'ler ve dağıtım üzerine kapsamlı dokümantasyon
+- **`tests/`** — Duman testleri ve entegrasyon test suitleri
+
+## ML Boru Hattı
+
+Platform, tam kapsamlı bir ML boru hattı içerir:
+
+1. **Veri İşleme** — Alım, doğrulama, deterministik tohumlama ile özellik mühendisliği
+2. **Model Yönetimi** — Eğitim orkestrasyonu, sürüm kaydı, geri alma desteği
+3. **Çıkarım Motoru** — Önbellekleme ile toplu ve tekil sembol tahminleri
+4. **Veritabanı Senkronizasyonu** — Tahminler, metrikler ve iş günlükleri için kalıcılık
+5. **İzleme** — Sağlık panoları ve uyarı yönlendirme
+
+## Arka Plan İşleri
+
+- `DailyPredictionJob` | Günlük | Özellikleri yenile ve çıkarım yap |
+- `WeeklyTrainingJob` | Haftalık | LSTM modellerini yeniden eğit ve sürümle |
+- `DataIntegrityJob` | Zamanlanmış | Veri eksiksizliğini ve anormallikleri doğrula |
+- `PerformanceReportJob` | Periyodik | KPI'ları topla ve bildirim gönder |
+
+## Hedef Kullanıcılar
+
+- Bireysel yatırımcılar
+- Portföy yöneticileri
+- Finansal danışmanlar
+- Türk piyasalarını değerlendiren finans öğrencileri

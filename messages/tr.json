@@ -1,0 +1,58 @@
+{
+    "Navigation": {
+        "home": "Ana Sayfa",
+        "about": "Hakkımda",
+        "contact": "İletişim"
+    },
+    "Home": {
+        "heroTitleStart": "",
+        "heroTitleHighlight": "Econometrics Senior & Creative Developer",
+        "heroTitleEnd": "",
+        "heroDescription": "Karmaşık finansal verileri Python ve Next.js kullanarak anlamlı web deneyimlerine dönüştürüyorum."
+    },
+    "About": {
+        "title": "Hakkımda",
+        "intro": "Ben Behlül Bulca, Uludağ Üniversitesi Ekonometri bölümünde okuyan, veri, makine öğrenimi, kodlama ve teknoloji konularına tutkulu, motivasyonu yüksek bir öğrenciyim. Teorik bilgiyi pratik değere dönüştürmeye ve hem akademik hem de teknik becerilerimi sürekli geliştirmeye odaklanıyorum.",
+        "educationTitle": "Eğitim",
+        "education": [
+            {
+                "school": "Uludağ Üniversitesi",
+                "degree": "Ekonometri Lisans",
+                "date": "2022 – Devam Ediyor",
+                "description": "İlgili Dersler: İstatistiksel Analiz, Zaman Serisi Analizi, Finansal Ekonometri, Veri Analiz Yöntemleri."
+            },
+            {
+                "school": "Eastern European University of Applied Sciences in Bialystok",
+                "degree": "Erasmus+ Öğrenci Hareketliliği",
+                "date": "2023 – 2024",
+                "description": "Çok kültürlü ortamlarda uyum yeteneği ve geniş bir perspektif kazandıran deneyim."
+            }
+        ],
+        "experienceTitle": "İş Deneyimi",
+        "experience": [
+            {
+                "role": "Öğrenci Asistanı",
+                "company": "Uludağ Üniversitesi Kariyer Merkezi",
+                "date": "Kas 2025 – Devam Ediyor",
+                "description": "Merkezin web sitesini modern teknolojilerle geliştirmek. Ofis operasyonlarına teknik destek ve yazılım sorunlarını gidermek."
+            },
+            {
+                "role": "Fakülte Stajyeri / Öğrenci Asistanı",
+                "company": "Uludağ Üniversitesi İktisadi ve İdari Bilimler Fakültesi",
+                "date": "Kas 2024 – Haz 2025",
+                "description": "BT desteği sağlama, idari görevlere yardım ve operasyonel iş akışına destek."
+            }
+        ],
+        "skillsTitle": "Teknik Yetenekler",
+        "skills": {
+            "languages": "Python, R, JavaScript/TypeScript",
+            "data": "Excel, Pandas, NumPy",
+            "ml": "TensorFlow, Keras, Scikit-learn, Optuna",
+            "web": "Next.js, React, Tailwind CSS, Node.js, Flask",
+            "db": "PostgreSQL, SQLite, Prisma"
+        }
+    },
+    "Footer": {
+        "rights": "Tüm hakları saklıdır."
+    }
+}

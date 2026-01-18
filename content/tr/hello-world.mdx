@@ -1,0 +1,62 @@
+---
+title: "Bu Portfolyoyu Nasıl Geliştirdim?"
+date: "2026-01-18"
+excerpt: "Kişisel web sitemin arkasındaki teknoloji yığını, tasarım felsefesi ve mühendislik kararlarına derinlemesine bir bakış."
+tags: ["Next.js", "TypeScript", "Tailwind CSS", "i18n"]
+coverImage: "/images/hello-world-cover.png"
+---
+
+## Giriş
+
+Yeni portfolyoma hoş geldiniz. Bu proje sadece çalışmalarımı sergilediğim bir vitrin değil; aynı zamanda modern web teknolojilerini ve rafine tasarım estetiğini deneyimlediğim bir oyun alanı.
+
+## Teknoloji Yığını
+
+Performans ve geliştirici deneyimini ön planda tutan, prodüksiyona hazır sağlam bir altyapı seçtim:
+
+- **Framework**: [Next.js 16+](https://nextjs.org/) (App Router)
+- **Dil**: Tip güvenliği için [TypeScript](https://www.typescriptlang.org/)
+- **Stil**: Hızlı ve esnek stillendirme için [Tailwind CSS](https://tailwindcss.com/)
+- **Uluslararasılaşma**: Sorunsuz İngilizce/Türkçe desteği için [next-intl](https://next-intl-docs.vercel.app/)
+- **Animasyonlar**: Hassas zaman çizelgesi kontrolü için `animejs`
+- **İçerik**: Blog yazıları için esnek bileşen yapısı sunan MDX
+
+## Tasarım Felsefesi
+
+Tasarım, **"Minimalist Premium"** bir estetiği hedefler. Temel unsurlar şunlardır:
+
+- **Glassmorphism**: Derinlik yaratmak için ince yarı saydam katmanlar (`backdrop-blur`).
+- **Tipografi**: Editoryal bir his yaratmak için başlıklar için **Playfair Display** (Serif) ve gövde metni için **Inter** (Sans) eşleşmesi.
+- **Wireframe Estetiği**: Hero bölümü, kod ve tasarımın kesişimini simgeleyen özel ASCII tarzı wireframe sanatını kullanır.
+
+## Temel Özellikler
+
+1.  **Tam Yerelleştirme**: Blog yazıları dahil her sayfa İngilizce ve Türkçe desteğine sahiptir.
+2.  **Karanlık/Aydınlık Mod Altyapısı**: CSS değişkenleri ile kolay tema yönetimi için hazırlandı (şu anda aydınlık/temiz bir görünüme odaklanıldı).
+3.  **Duyarlı Tasarım**: Mobil, tablet ve masaüstünde kusursuz deneyim.
+4.  **Performans**: Blog yazıları için statik üretim (Static Generation) sayesinde ışık hızında yükleme süreleri.
+
+## Kod Örneği
+
+Fade-in animasyon bileşeninin nasıl uygulandığına dair bir örnek:
+
+```tsx
+export function FadeIn({ children, delay = 0, className }: Props) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    anime({
+      targets: ref.current,
+      opacity: [0, 1],
+      translateY: [20, 0],
+      delay,
+      easing: 'easeOutExpo',
+      duration: 800
+    });
+  }, [delay]);
+
+  return <div ref={ref} className={className}>{children}</div>;
+}
+```
+
+Bu web sitesi açık kaynaktır. Kodları [GitHub](https://github.com/BehlulBulca) profilimde inceleyebilirsiniz.

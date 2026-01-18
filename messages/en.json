@@ -1,0 +1,65 @@
+{
+    "Navigation": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "Home": {
+        "heroTitleStart": "",
+        "heroTitleHighlight": "Econometrics Senior & Creative Developer",
+        "heroTitleEnd": "",
+        "heroDescription": "Transforming complex financial data into meaningful web experiences using Python and Next.js."
+    },
+    "About": {
+        "title": "About Me",
+        "intro": "I am Behlül Bulca, a motivated and curious Econometrics student at Uludağ University with a strong passion for data, machine learning, coding, technology, and problem-solving. I am dedicated to exploring how theoretical knowledge can be translated into practical value and continuously seek opportunities to enhance my skills, both academically and technically.",
+        "educationTitle": "Education",
+        "education": [
+            {
+                "school": "Uludağ University",
+                "degree": "Bachelor’s degree in Econometrics",
+                "date": "2022 – Current",
+                "description": "Relevant Coursework: Statistical Analysis, Time Series Analysis, Financial Econometrics, Data Analysis Methods."
+            },
+            {
+                "school": "Eastern European University of Applied Sciences in Bialystok",
+                "degree": "Erasmus+ Student Mobility",
+                "date": "2023 – 2024",
+                "description": "Enhanced adaptability and broadened perspective in multicultural environments."
+            }
+        ],
+        "experienceTitle": "Work Experience",
+        "experience": [
+            {
+                "role": "Student Assistant",
+                "company": "Uludağ University Career Center",
+                "date": "Nov 2025 – Present",
+                "description": "Developing the center's website using modern web technologies. Providing IT support and troubleshooting software issues."
+            },
+            {
+                "role": "Faculty Intern / Student Assistant",
+                "company": "Faculty of Economics and Administrative Sciences, Uludağ University",
+                "date": "Nov 2024 – June 2025",
+                "description": "Provided IT support, assisted with administrative tasks, and supported operational workflows."
+            }
+        ],
+        "skillsTitle": "Technical Skills",
+        "skills": {
+            "languages": "Python, R, JavaScript/TypeScript",
+            "data": "Excel, Pandas, NumPy",
+            "ml": "TensorFlow, Keras, Scikit-learn, Optuna",
+            "web": "Next.js, React, Tailwind CSS, Node.js, Flask",
+            "db": "PostgreSQL, SQLite, Prisma"
+        }
+    },
+    "Contact": {
+        "title": "Get in Touch",
+        "description": "Have a project in mind or just want to say hi? Feel free to reach out via email or social media.",
+        "email": "Email",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+    },
+    "Footer": {
+        "rights": "All rights reserved."
+    }
+}

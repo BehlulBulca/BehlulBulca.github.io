@@ -1,0 +1,82 @@
+---
+title: "(WIP) Financial Analytics Platform"
+date: "2026-01-18"
+excerpt: "An AI-powered financial analytics platform designed for Borsa Istanbul (BIST) markets with real-time tracking and ML forecasting."
+tags: ["Python", "Next.js", "Machine Learning", "Finance"]
+coverImage: "/images/market-analysis-cover.png"
+---
+
+## Overview
+
+This is an **AI-powered financial analytics platform** designed for **Borsa Istanbul (BIST)** markets. It provides institutional-grade analytics, risk metrics, and machine learning-driven price forecasting for Turkish capital markets.
+
+## Tech Stack
+
+
+ - **Backend** - Python 3.12, Flask 3.0, Peewee ORM, APScheduler 
+ - **Frontend** - Next.js 16 
+ - **ML/AI** - TensorFlow LSTM models, Statsmodels econometrics, Ollama LLM via MCP 
+ - **Database** - PostgreSQL 
+ - **Visualization** - Lightweight Charts, Tailwind CSS, shadcn/ui
+
+## Key Features
+
+- **📈 Real-time Market Data** — BIST30/BIST100 tracking with universal market mode support
+- **🧮 CAPM & Beta Analysis** — Daily, weekly, and hourly econometric models
+- **🤖 ML Price Forecasting** — LSTM neural networks with automated retraining pipeline
+- **🧠 Generative AI Analysis** — Natural language market commentary via **Ollama & MCP**, translating metrics into human-readable insights
+- **📊 Technical Analysis** — RSI, MACD, Bollinger Bands, and pattern detection algorithms
+- **🔄 Background Agents** — Scheduled jobs (APScheduler) for predictions, training, and data integrity
+- **🛡️ Mock Mode** — Deterministic data generation for safe pre-licensing development
+- **🌐 Multi-Market Support** — Runtime switching between BIST30, BIST100, SP500, NASDAQ
+
+## Architecture
+
+```
+┌──────────────┐    ┌────────────────┐    ┌──────────────┐
+│ Next.js UI   │◄──►│ Flask Services │◄──►│ Database Tier│
+└──────────────┘    └────────────────┘    └──────────────┘
+        ▲                     ▲                    ▲
+        │                     │                    │
+        │             ┌────────────────┐           │
+        │             │ ML Agent Stack │◄──────────┘
+        │             └────────────────┘
+        │
+┌──────────────┐    ┌────────────────┐
+│ Mock Data    │    │ Ollama / MCP   │
+│ Generator    │    │ AI Assistants  │
+└──────────────┘    └────────────────┘
+```
+
+## Project Structure
+
+- **`backend/`** — Flask API with modular blueprints for econometrics, technical analysis, ML, and automation
+- **`frontend/`** — Next.js 16 frontend with Tailwind and shadcn/ui components
+- **`config/`** — API keys, settings, and user preferences
+- **`data/`** — Local storage for market history and reports
+- **`docs/`** — Comprehensive documentation on architecture, APIs, and deployment
+- **`tests/`** — Smoke tests and integration test suites
+
+## ML Pipeline
+
+The platform includes a complete ML pipeline with:
+
+1. **Data Processing** — Ingestion, validation, feature engineering with deterministic seeding
+2. **Model Management** — Training orchestration, version registry, rollback support
+3. **Inference Engine** — Batch and single-symbol predictions with caching
+4. **Database Sync** — Persistence for predictions, metrics, and job logs
+5. **Monitoring** — Health dashboards and alert routing
+
+## Background Jobs
+
+- `DailyPredictionJob` | Daily | Refresh features and run inference |
+- `WeeklyTrainingJob` | Weekly | Retrain LSTM models and version them |
+- `DataIntegrityJob` | Scheduled | Validate data completeness and anomalies |
+- `PerformanceReportJob` | Periodic | Aggregate KPIs and push notifications |
+
+## Target Users
+
+- Retail investors
+- Portfolio managers
+- Financial advisors
+- Finance students evaluating Turkish markets
