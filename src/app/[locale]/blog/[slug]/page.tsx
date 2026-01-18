@@ -5,6 +5,7 @@ import { format } from "date-fns";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import { setRequestLocale } from 'next-intl/server';
 
 interface PageProps {
     params: Promise<{ slug: string; locale: string }>;
@@ -49,6 +50,7 @@ export async function generateStaticParams() {
 
 export default async function BlogPost({ params }: PageProps) {
     const { slug, locale } = await params;
+    setRequestLocale(locale);
     const post = getPostBySlug(slug, locale);
 
     if (!post) {

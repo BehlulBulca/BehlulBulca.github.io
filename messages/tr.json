@@ -52,6 +52,13 @@
             "db": "PostgreSQL, SQLite, Prisma"
         }
     },
+    "Contact": {
+        "title": "İletişime Geçin",
+        "description": "Bir projeniz mi var yoksa sadece merhaba mı demek istiyorsunuz? E-posta veya sosyal medya aracılığıyla iletişime geçmekten çekinmeyin.",
+        "email": "E-posta",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+    },
     "Footer": {
         "rights": "Tüm hakları saklıdır."
     }

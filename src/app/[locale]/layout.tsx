@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Inter, Newsreader, Playfair_Display } from "next/font/google";
@@ -38,6 +38,9 @@ export default async function LocaleLayout({
     params: Promise<{ locale: string }>;
 }) {
     const { locale } = await params;
+
+    // Enable static rendering
+    setRequestLocale(locale);
 
     // Ensure that the incoming `locale` is valid
     if (!routing.locales.includes(locale as "en" | "tr")) {

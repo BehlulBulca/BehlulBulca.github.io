@@ -1,7 +1,9 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-export default function About() {
-    const t = useTranslations('About');
+export default async function About({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    setRequestLocale(locale);
+    const t = await getTranslations('About');
 
     // NOTE: In a real Next-Intl setup iterating arrays often requires specific config or usage pattern.
     // Here we hardcode indices based on our known JSON structure for simplicity and type safety assurance in this snippet.

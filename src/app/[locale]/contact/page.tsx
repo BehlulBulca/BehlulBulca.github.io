@@ -1,9 +1,11 @@
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Mail, Linkedin, Github, ArrowUpRight } from "lucide-react";
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-export default function Contact() {
-    const t = useTranslations('Contact');
+export default async function Contact({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    setRequestLocale(locale);
+    const t = await getTranslations('Contact');
 
     const contacts = [
         {

@@ -2,10 +2,11 @@ import { getAllPosts } from "@/lib/posts";
 import { PostCard } from "@/components/PostCard";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { StaggeredList } from "@/components/animations/StaggeredList";
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const posts = getAllPosts(locale);
   const t = await getTranslations('Home');
 
