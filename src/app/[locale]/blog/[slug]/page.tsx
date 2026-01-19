@@ -3,7 +3,7 @@ import { MDXContent } from "@/components/mdx-components";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Metadata } from "next";
 import { setRequestLocale } from 'next-intl/server';
 

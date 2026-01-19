@@ -1,9 +1,12 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { format } from "date-fns";
 import { Post } from "@/lib/posts";
 import { ArrowUpRight } from "lucide-react";
 
 export function PostCard({ post }: { post: Post; index?: number }) {
+    // Format date on server side with consistent locale to avoid hydration mismatch
+    const formattedDate = format(new Date(post.meta.date), "MMMM d, yyyy");
+    
     return (
         <div className="group relative">
             <Link href={`/blog/${post.slug}`} className="block">
@@ -18,8 +21,8 @@ export function PostCard({ post }: { post: Post; index?: number }) {
                         </div>
                     )}
                     <div className="flex items-center justify-between mb-4">
-                        <time className="text-sm text-muted-foreground font-medium">
-                            {format(new Date(post.meta.date), "MMMM d, yyyy")}
+                        <time className="text-sm text-muted-foreground font-medium" suppressHydrationWarning>
+                            {formattedDate}
                         </time>
                         <div className="p-2 rounded-full bg-secondary text-secondary-foreground opacity-0 group-hover:opacity-100 transition-opacity transform -rotate-45 group-hover:rotate-0 duration-300">
                             <ArrowUpRight size={16} />
