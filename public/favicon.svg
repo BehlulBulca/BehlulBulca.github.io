@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Black circle background -->
+  <circle cx="64" cy="64" r="64" fill="#000000"/>
+
+  <!-- Letter B in white using serif-style font -->
+  <text
+    x="64"
+    y="64"
+    font-family="Georgia, 'Playfair Display', serif"
+    font-size="72"
+    font-weight="700"
+    fill="#FFFFFF"
+    text-anchor="middle"
+    dominant-baseline="central"
+    style="letter-spacing: -2px;"
+  >B</text>
+</svg>
