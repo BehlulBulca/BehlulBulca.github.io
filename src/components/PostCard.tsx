@@ -16,6 +16,8 @@ export function PostCard({ post }: { post: Post; index?: number }) {
                             <img
                                 src={post.meta.coverImage}
                                 alt={post.meta.title}
+                                width={1024}
+                                height={1024}
                                 className="w-full h-full object-cover object-center"
                             />
                         </div>

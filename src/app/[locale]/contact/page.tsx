@@ -1,6 +1,16 @@
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Mail, Linkedin, Github, ArrowUpRight } from "lucide-react";
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Metadata } from 'next';
+
+export async function generateMetadata(): Promise<Metadata> {
+    const t = await getTranslations('Contact');
+
+    return {
+        title: t('title'),
+        description: t('description'),
+    };
+}
 
 export default async function Contact({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;

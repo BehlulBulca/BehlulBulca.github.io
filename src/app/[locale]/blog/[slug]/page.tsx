@@ -21,14 +21,34 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         };
     }
 
+    const coverImage = post.meta.coverImage || '/images/hero-illustration.png';
+
     return {
-        title: `${post.meta.title} | AniTest`,
+        title: post.meta.title,
         description: post.meta.excerpt,
+        keywords: post.meta.tags || [],
+        authors: [{ name: 'Behlül Bulca' }],
         openGraph: {
             title: post.meta.title,
             description: post.meta.excerpt,
             type: "article",
             publishedTime: post.meta.date,
+            authors: ['Behlül Bulca'],
+            tags: post.meta.tags,
+            images: [
+                {
+                    url: coverImage,
+                    width: 1024,
+                    height: 1024,
+                    alt: post.meta.title,
+                },
+            ],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: post.meta.title,
+            description: post.meta.excerpt,
+            images: [coverImage],
         },
     };
 }

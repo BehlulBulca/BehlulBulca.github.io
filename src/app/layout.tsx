@@ -31,27 +31,69 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-    title: 'Behlül Bulca',
-    description: 'Personal portfolio and blog',
+    title: {
+        default: 'Behlül Bulca - Econometrics & Web Development',
+        template: '%s | Behlül Bulca'
+    },
+    description: 'Personal portfolio and blog of Behlül Bulca, Econometrics student and creative developer. Transforming complex financial data into meaningful web experiences using Python and Next.js.',
+    keywords: ['Behlül Bulca', 'Econometrics', 'Web Development', 'Python', 'Next.js', 'Data Analysis', 'Portfolio', 'Blog'],
+    authors: [{ name: 'Behlül Bulca' }],
+    creator: 'Behlül Bulca',
+    metadataBase: new URL('https://behlulbulca.github.io'),
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        alternateLocale: ['tr_TR'],
+        url: 'https://behlulbulca.github.io',
+        title: 'Behlül Bulca - Econometrics & Web Development',
+        description: 'Personal portfolio and blog of Behlül Bulca, Econometrics student and creative developer.',
+        siteName: 'Behlül Bulca Portfolio',
+        images: [
+            {
+                url: '/images/hero-illustration.png',
+                width: 1024,
+                height: 1024,
+                alt: 'Behlül Bulca Portfolio',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Behlül Bulca - Econometrics & Web Development',
+        description: 'Personal portfolio and blog of Behlül Bulca, Econometrics student and creative developer.',
+        images: ['/images/hero-illustration.png'],
+    },
     appleWebApp: {
         capable: true,
         statusBarStyle: 'default',
         title: 'Behlül Bulca',
     },
     formatDetection: {
-        telephone: false, // Prevent auto-linking phone numbers
+        telephone: false,
     },
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({
+  children,
+  params
+}: {
+  children: ReactNode;
+  params: Promise<{ locale?: string }>;
+}) {
+  // Extract locale from params, default to 'en'
+  const { locale = 'en' } = await params || {};
+
   return (
-    <html suppressHydrationWarning className={`${inter.variable} ${newsreader.variable} ${playfair.variable}`}>
+    <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${newsreader.variable} ${playfair.variable}`}>
       <head>
         {/* iOS Safari specific */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="mobile-web-app-capable" content="yes" />
+        {/* DNS prefetch and preconnect for performance */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="bg-background text-foreground antialiased font-sans selection:bg-primary selection:text-white min-h-screen min-h-[100dvh] flex flex-col">
+      <body className="bg-background text-foreground antialiased font-sans selection:bg-primary selection:text-white min-h-dvh flex flex-col">
         {children}
       </body>
     </html>

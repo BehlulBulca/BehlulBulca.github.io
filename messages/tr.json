@@ -8,7 +8,8 @@
         "heroTitleStart": "",
         "heroTitleHighlight": "Econometrics Senior & Creative Developer",
         "heroTitleEnd": "",
-        "heroDescription": "Karmaşık finansal verileri Python ve Next.js kullanarak anlamlı web deneyimlerine dönüştürüyorum."
+        "heroDescription": "Karmaşık finansal verileri Python ve Next.js kullanarak anlamlı web deneyimlerine dönüştürüyorum.",
+        "blogPostsTitle": "Blog Yazıları"
     },
     "About": {
         "title": "Hakkımda",

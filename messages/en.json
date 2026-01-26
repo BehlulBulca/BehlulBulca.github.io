@@ -8,7 +8,8 @@
         "heroTitleStart": "",
         "heroTitleHighlight": "Econometrics Senior & Creative Developer",
         "heroTitleEnd": "",
-        "heroDescription": "Transforming complex financial data into meaningful web experiences using Python and Next.js."
+        "heroDescription": "Transforming complex financial data into meaningful web experiences using Python and Next.js.",
+        "blogPostsTitle": "Blog Posts"
     },
     "About": {
         "title": "About Me",

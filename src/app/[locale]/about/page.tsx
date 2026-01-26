@@ -1,4 +1,14 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Metadata } from 'next';
+
+export async function generateMetadata(): Promise<Metadata> {
+    const t = await getTranslations('About');
+
+    return {
+        title: t('title'),
+        description: t('intro'),
+    };
+}
 
 export default async function About({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;

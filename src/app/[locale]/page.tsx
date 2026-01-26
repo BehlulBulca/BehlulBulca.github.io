@@ -3,6 +3,15 @@ import { PostCard } from "@/components/PostCard";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { StaggeredList } from "@/components/animations/StaggeredList";
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Metadata } from 'next';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('Home');
+
+  return {
+    description: t('heroDescription'),
+  };
+}
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -28,19 +37,24 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <img
             src="/images/hero-illustration.png"
             alt="ASCII Globe Background"
+            width={1024}
+            height={1024}
             className="w-full max-w-4xl mx-auto object-contain animate-spin-slow"
           />
         </div>
       </FadeIn>
 
-      <StaggeredList delay={600} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
-        {posts.map((post, index) => (
-          // Div wrapper needed for StaggeredList to target
-          <div key={post.slug} style={{ opacity: 0 }}>
-            <PostCard post={post} index={index} />
-          </div>
-        ))}
-      </StaggeredList>
+      <section>
+        <h2 className="sr-only">{t('blogPostsTitle', { default: 'Blog Posts' })}</h2>
+        <StaggeredList delay={600} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+          {posts.map((post, index) => (
+            // Div wrapper needed for StaggeredList to target
+            <div key={post.slug} style={{ opacity: 0 }}>
+              <PostCard post={post} index={index} />
+            </div>
+          ))}
+        </StaggeredList>
+      </section>
     </div>
   );
 }
